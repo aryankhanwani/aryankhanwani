@@ -4,7 +4,7 @@ import { motion, useInView } from "motion/react";
 import { useRef, ReactNode } from "react";
 
 interface TimelineContentProps {
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   animationNum?: number;
   timelineRef?: React.RefObject<HTMLElement>;
   customVariants?: any;
