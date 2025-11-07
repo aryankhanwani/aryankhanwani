@@ -20,7 +20,7 @@ export default function Hero() {
 
       <div className="w-full max-w-[1280px] mx-auto relative z-10">
         <LayoutGroup>
-          <div className="flex flex-col items-center text-center space-y-8 md:space-y-10">
+          <div className="flex flex-col items-center text-center">
             {/* Main Headline with TextRotate */}
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-zinc-900 dark:text-zinc-50 leading-tight max-w-5xl"
@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Subtext - Conversion focused */}
             <motion.p
-              className="text-lg sm:text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed mt-4 md:mt-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -71,7 +71,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 w-full max-w-2xl"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 w-full max-w-2xl mt-8 md:mt-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
