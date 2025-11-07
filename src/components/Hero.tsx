@@ -28,7 +28,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <motion.span className="inline-flex flex-wrap items-center justify-center gap-2" layout>
+              <motion.span className="inline-flex flex-wrap items-center justify-center gap-2 mt-8" layout>
               <span>I design and develop</span>
                 <span style={{ fontFamily: 'var(--font-lora), serif' }}>
                   <TextRotate
