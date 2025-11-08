@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-            <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-16 px-4">
+            <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-16 px-4 bg-transparent">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Decorative lines */}
@@ -21,6 +21,24 @@ export default function Hero() {
       <div className="w-full max-w-[1280px] mx-auto relative z-10">
         <LayoutGroup>
           <div className="flex flex-col items-center text-center">
+            {/* Label: Your Creative Expert */}
+            <motion.div
+              className="mb-3 md:mb-4 mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="relative inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-1.5 md:py-2.5 rounded-full bg-gradient-to-br from-white/90 via-white/80 to-white/70 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-900/70 backdrop-blur-xl border border-white/20 dark:border-zinc-700/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.12),inset_0_1px_0_0_rgba(255,255,255,0.5)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4),inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:shadow-[0_12px_48px_0_rgba(0,0,0,0.18),inset_0_1px_0_0_rgba(255,255,255,0.6)] dark:hover:shadow-[0_12px_48px_0_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.15)] transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/40 before:to-transparent before:pointer-events-none">
+                <div className="flex items-center gap-1.5 md:gap-2">
+                  <img src="/framer.png" alt="Framer" className="w-4 h-4 md:w-5 md:h-5 object-contain" />
+                  <img src="/figma.png" alt="Figma" className="w-4 h-4 md:w-5 md:h-5 object-contain" />
+                </div>
+                <span className="text-xs md:text-sm font-medium text-zinc-900 dark:text-zinc-50 whitespace-nowrap">
+                  Your Creative Expert
+                </span>
+              </div>
+            </motion.div>
+
             {/* Main Headline with TextRotate */}
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-zinc-900 dark:text-zinc-50 leading-tight max-w-5xl"
@@ -28,7 +46,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <motion.span className="inline-flex flex-wrap items-center justify-center gap-2 mt-8" layout>
+              <motion.span className="inline-flex flex-wrap items-center justify-center gap-2" layout>
               <span>I design and develop</span>
                 <span style={{ fontFamily: 'var(--font-lora), serif' }}>
                   <TextRotate
@@ -40,7 +58,7 @@ export default function Hero() {
                       'brand identities',
                       'design systems',
                     ]}
-                    mainClassName="text-zinc-900 dark:text-zinc-50 px-3 md:px-4 bg-slate-200 dark:bg-zinc-800 overflow-hidden py-1 md:py-2 justify-center rounded-xl inline-block italic font-medium"
+                    mainClassName="text-zinc-900 dark:text-zinc-50 px-3 md:px-4 overflow-hidden py-1 md:py-2 justify-center rounded-xl inline-block italic font-medium"
                     elementLevelClassName="italic"
                     staggerFrom="last"
                     initial={{ y: '100%' }}

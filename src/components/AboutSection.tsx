@@ -82,7 +82,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="py-12 md:py-20 px-4 bg-white dark:bg-zinc-950 min-h-[50vh] overflow-x-hidden">
+    <section className="py-12 md:py-20 px-4 bg-transparent min-h-[50vh] overflow-x-hidden">
       <div className="w-full max-w-[1280px] mx-auto">
         <div className="flex flex-col space-y-6 md:space-y-8 w-full">
           {/* Section Heading - Centered */}

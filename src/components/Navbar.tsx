@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full px-4">
       <motion.div
-        className="flex items-center justify-between rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-800/50 shadow-lg px-4 md:px-6 py-3 mx-auto"
+        className="flex items-center justify-between rounded-xl bg-white/40 dark:bg-zinc-900/40 backdrop-blur-xl border border-white/20 dark:border-zinc-700/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] px-4 md:px-6 py-3 mx-auto"
         initial={{
           maxWidth: '1280px',
         }}
@@ -56,21 +56,21 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           <a
             href="#work"
-            className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
+            className="text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
           >
             Work
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-zinc-50 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#services"
-            className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
+            className="text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
           >
             Services
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-zinc-50 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#contact"
-            className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
+            className="text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-50 relative group transition-colors"
           >
             Contact
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 dark:bg-zinc-50 group-hover:w-full transition-all duration-300"></span>
