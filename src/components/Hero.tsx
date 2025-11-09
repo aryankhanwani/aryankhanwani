@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-            <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-16 px-4 bg-transparent">
+            <section className="relative w-full flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-8 md:pb-16 px-4 bg-transparent">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Decorative lines */}
@@ -54,7 +54,6 @@ export default function Hero() {
                       'landing pages',
                       'SaaS products',
                       'web applications',
-                      'mobile designs',
                       'brand identities',
                       'design systems',
                     ]}
@@ -89,7 +88,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 w-full max-w-2xl mt-8 md:mt-12"
+              className="flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 w-full max-w-2xl mt-8 md:mt-12 px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -97,62 +96,19 @@ export default function Hero() {
               {/* Primary CTA */}
               <a
                 href="#contact"
-                className="group flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 text-base md:text-lg font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-lg hover:shadow-xl w-full sm:w-auto min-w-[200px]"
+                className="group flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 text-sm sm:text-base md:text-lg font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none sm:min-w-[200px]"
               >
                 Schedule a call
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </a>
 
               {/* Secondary CTA */}
               <a
                 href="#work"
-                className="flex items-center justify-center px-6 md:px-8 py-3 md:py-4 rounded-lg border-2 border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 text-base md:text-lg font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-200 w-full sm:w-auto min-w-[200px]"
+                className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg border-2 border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 text-sm sm:text-base md:text-lg font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-200 flex-1 sm:flex-none sm:min-w-[200px]"
               >
                 View my work
               </a>
-            </motion.div>
-
-            {/* Trust Building Elements */}
-            <motion.div
-              className="w-full mt-12 md:mt-16 space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              {/* Trust Text */}
-              <p className="text-sm text-zinc-500 dark:text-zinc-500 uppercase tracking-wider">
-                Trusted by innovative teams
-              </p>
-
-              {/* Client Logos / Brands */}
-              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60 hover:opacity-100 transition-opacity">
-                {/* Placeholder brand logos - Replace with actual logos */}
-                <div className="flex items-center gap-2 text-zinc-400 dark:text-zinc-600 text-sm font-medium">
-                  <div className="w-8 h-8 rounded bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xs font-bold">
-                    TC
-                  </div>
-                  <span>TechCorp</span>
-                </div>
-                <div className="flex items-center gap-2 text-zinc-400 dark:text-zinc-600 text-sm font-medium">
-                  <div className="w-8 h-8 rounded bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xs font-bold">
-                    SA
-                  </div>
-                  <span>StartupAI</span>
-                </div>
-                <div className="flex items-center gap-2 text-zinc-400 dark:text-zinc-600 text-sm font-medium">
-                  <div className="w-8 h-8 rounded bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xs font-bold">
-                    DF
-                  </div>
-                  <span>DesignFlow</span>
-                </div>
-                <div className="flex items-center gap-2 text-zinc-400 dark:text-zinc-600 text-sm font-medium">
-                  <div className="w-8 h-8 rounded bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xs font-bold">
-                    VC
-                  </div>
-                  <span>VentureCo</span>
-                </div>
-              </div>
-
             </motion.div>
           </div>
         </LayoutGroup>
