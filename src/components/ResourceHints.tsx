@@ -4,20 +4,37 @@ import { useEffect } from "react";
 
 export default function ResourceHints() {
   useEffect(() => {
-    // Add DNS prefetch and preconnect for external resources
-    const preconnect = document.createElement("link");
-    preconnect.rel = "preconnect";
-    preconnect.href = "https://images.unsplash.com";
-    document.head.appendChild(preconnect);
+    // Add preconnect for critical origins
+    const origins = [
+      "https://images.unsplash.com",
+      "https://cal.com",
+    ];
 
-    const dnsPrefetch = document.createElement("link");
-    dnsPrefetch.rel = "dns-prefetch";
-    dnsPrefetch.href = "https://images.unsplash.com";
-    document.head.appendChild(dnsPrefetch);
+    const links: HTMLLinkElement[] = [];
+
+    origins.forEach((origin) => {
+      // Preconnect for faster connection
+      const preconnect = document.createElement("link");
+      preconnect.rel = "preconnect";
+      preconnect.href = origin;
+      preconnect.crossOrigin = "anonymous";
+      document.head.appendChild(preconnect);
+      links.push(preconnect);
+
+      // DNS prefetch as fallback
+      const dnsPrefetch = document.createElement("link");
+      dnsPrefetch.rel = "dns-prefetch";
+      dnsPrefetch.href = origin;
+      document.head.appendChild(dnsPrefetch);
+      links.push(dnsPrefetch);
+    });
 
     return () => {
-      document.head.removeChild(preconnect);
-      document.head.removeChild(dnsPrefetch);
+      links.forEach((link) => {
+        if (link.parentNode) {
+          link.parentNode.removeChild(link);
+        }
+      });
     };
   }, []);
 

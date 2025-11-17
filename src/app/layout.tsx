@@ -11,6 +11,8 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700", "800"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const lora = Lora({
@@ -19,7 +21,9 @@ const lora = Lora({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
-  preload: false, // Load on demand since it's used less frequently
+  preload: false,
+  adjustFontFallback: true,
+  fallback: ["Georgia", "serif"],
 });
 
 const geistMono = Geist_Mono({
@@ -27,6 +31,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   preload: false,
+  adjustFontFallback: true,
+  fallback: ["monospace"],
 });
 
 export const metadata: Metadata = {

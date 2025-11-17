@@ -173,7 +173,9 @@ export default function BestProjectsSection() {
                             alt={project.title}
                             fill
                             className="object-cover"
-                            loading="lazy"
+                            loading={index < 2 ? "eager" : "lazy"}
+                            priority={index < 2}
+                            fetchPriority={index === 1 ? "high" : index === 0 ? "high" : "auto"}
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         </motion.div>
