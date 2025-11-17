@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Lora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import CustomCursor from "@/components/CustomCursor";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -54,8 +55,9 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
+          <CustomCursor />
           <div className="min-h-screen w-full overflow-x-hidden relative">
-            {children}
+        {children}
           </div>
         </ThemeProvider>
       </body>
