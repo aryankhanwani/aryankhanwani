@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import Image from 'next/image';
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -295,7 +294,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index, i
                 }}
                 transition={{ duration: 0.3 }}
                 className={cn(
-                  "relative rounded-full overflow-hidden border-2 border-zinc-200 dark:border-zinc-800",
+                  "rounded-full overflow-hidden border-2 border-zinc-200 dark:border-zinc-800",
                   "shadow-lg",
                   isMobile ? "h-12 w-12" : isFull ? "h-16 w-16" : isSmall ? "h-10 w-10" : "h-12 w-12"
                 )}
@@ -304,13 +303,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index, i
                   boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)"
                 }}
               >
-                <Image
+                <img
                   src={testimonial.imgSrc}
                   alt={testimonial.by}
-                  fill
-                  className="object-cover rounded-full"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 48px, 64px"
+                  className="h-full w-full object-cover"
                 />
               </motion.div>
               <motion.div 

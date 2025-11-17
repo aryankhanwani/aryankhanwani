@@ -3,16 +3,11 @@ import { Outfit, Lora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import CustomCursor from "@/components/CustomCursor";
-import ResourceHints from "@/components/ResourceHints";
 
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-  fallback: ["system-ui", "arial"],
 });
 
 const lora = Lora({
@@ -20,30 +15,16 @@ const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
-  display: "swap",
-  preload: false,
-  adjustFontFallback: true,
-  fallback: ["Georgia", "serif"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap",
-  preload: false,
-  adjustFontFallback: true,
-  fallback: ["monospace"],
 });
 
 export const metadata: Metadata = {
   title: "Aryan Khanwani - Portfolio",
   description: "Portfolio showcasing impactful work and business results",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  openGraph: {
-    title: "Aryan Khanwani - Portfolio",
-    description: "Portfolio showcasing impactful work and business results",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
@@ -74,7 +55,6 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
-          <ResourceHints />
           <CustomCursor />
           <div className="min-h-screen w-full overflow-x-hidden relative">
         {children}

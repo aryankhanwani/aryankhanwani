@@ -1,7 +1,6 @@
 'use client';
 
 import { LayoutGroup, motion } from 'motion/react';
-import Image from 'next/image';
 import { TextRotate } from '@/components/ui/text-rotate';
 import { ArrowRight } from 'lucide-react';
 
@@ -31,8 +30,8 @@ export default function Hero() {
             >
               <div className="relative inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-1.5 md:py-2.5 rounded-full bg-gradient-to-br from-white/90 via-white/80 to-white/70 dark:from-zinc-900/90 dark:via-zinc-900/80 dark:to-zinc-900/70 backdrop-blur-xl border border-white/20 dark:border-zinc-700/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.12),inset_0_1px_0_0_rgba(255,255,255,0.5)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4),inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:shadow-[0_12px_48px_0_rgba(0,0,0,0.18),inset_0_1px_0_0_rgba(255,255,255,0.6)] dark:hover:shadow-[0_12px_48px_0_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.15)] transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/40 before:to-transparent before:pointer-events-none">
                 <div className="flex items-center gap-1.5 md:gap-2">
-                  <Image src="/framer.png" alt="Framer" width={20} height={20} className="w-4 h-4 md:w-5 md:h-5 object-contain" priority />
-                  <Image src="/figma.png" alt="Figma" width={20} height={20} className="w-4 h-4 md:w-5 md:h-5 object-contain" priority />
+                  <img src="/framer.png" alt="Framer" className="w-4 h-4 md:w-5 md:h-5 object-contain" />
+                  <img src="/figma.png" alt="Figma" className="w-4 h-4 md:w-5 md:h-5 object-contain" />
                 </div>
                 <span className="text-xs md:text-sm font-medium text-zinc-900 dark:text-zinc-50 whitespace-nowrap">
                   Your Creative Expert

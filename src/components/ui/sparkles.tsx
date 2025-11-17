@@ -69,7 +69,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               zIndex: 1,
             },
 
-            fpsLimit: 60,
+            fpsLimit: 120,
             interactivity: {
               events: {
                 onClick: {

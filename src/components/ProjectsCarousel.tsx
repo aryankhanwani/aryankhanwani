@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Image from 'next/image';
 
 const demoImages = [
   { id: 1, url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop' },
@@ -48,14 +47,11 @@ export default function ProjectsCarousel() {
               key={`row1-${image.id}-${index}`}
               className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[450px] h-[180px] sm:h-[210px] md:h-[240px] lg:h-[300px] rounded-xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-1.5 md:p-2 border-2 border-zinc-200 dark:border-zinc-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-full h-full rounded-lg overflow-hidden bg-zinc-50 dark:bg-zinc-900 relative">
-                <Image
+              <div className="w-full h-full rounded-lg overflow-hidden bg-zinc-50 dark:bg-zinc-900">
+                <img
                   src={image.url}
                   alt={`Project ${image.id}`}
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, (max-width: 1024px) 360px, 450px"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -84,14 +80,11 @@ export default function ProjectsCarousel() {
               key={`row2-${image.id}-${index}`}
               className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[450px] h-[180px] sm:h-[210px] md:h-[240px] lg:h-[300px] rounded-xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 p-1.5 md:p-2 border-2 border-zinc-200 dark:border-zinc-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-full h-full rounded-lg overflow-hidden bg-zinc-50 dark:bg-zinc-900 relative">
-                <Image
+              <div className="w-full h-full rounded-lg overflow-hidden bg-zinc-50 dark:bg-zinc-900">
+                <img
                   src={image.url}
                   alt={`Project ${image.id}`}
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, (max-width: 1024px) 360px, 450px"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
