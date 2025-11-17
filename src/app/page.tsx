@@ -6,6 +6,9 @@ import HowWeWorkSection from "@/components/HowWeWorkSection";
 import BestProjectsSection from "@/components/BestProjectsSection";
 import { SparklesBackground } from "@/components/SparklesBackground";
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
+import FAQsSection from "@/components/FAQsSection";
+import BookAppointmentSection from "@/components/BookAppointmentSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <HowWeWorkSection />
       <BestProjectsSection />
       <StaggerTestimonials />
+      <FAQsSection />
+      <BookAppointmentSection />
+      <Footer />
     </>
   );
 }

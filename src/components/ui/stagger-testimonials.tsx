@@ -42,33 +42,6 @@ const testimonials = [
     size: "small",
     rating: 5
   },
-  {
-    id: 4,
-    testimonial: "If I could give 11 stars, I'd give 12. The quality of work and attention to detail is absolutely exceptional. This is hands down the best investment we've made.",
-    by: "Andre",
-    role: "Head of Design",
-    imgSrc: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces",
-    size: "small",
-    rating: 5
-  },
-  {
-    id: 5,
-    testimonial: "SO HAPPY WE FOUND YOU! The efficiency gains have been remarkable. We've saved over 100 hours in the first quarter alone, and the quality of output has improved dramatically.",
-    by: "Jeremy",
-    role: "Product Manager",
-    imgSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=faces",
-    size: "medium",
-    rating: 5
-  },
-  {
-    id: 6,
-    testimonial: "Never going back to our old way of working. This solution represents the future of how businesses should operate. The innovation and reliability make it essential for any forward-thinking organization.",
-    by: "Pam",
-    role: "Marketing Director",
-    imgSrc: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=faces",
-    size: "small",
-    rating: 5
-  }
 ];
 
 interface TestimonialCardProps {
