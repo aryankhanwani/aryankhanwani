@@ -1,14 +1,43 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import AboutSection from "@/components/AboutSection";
-import HowWeWorkSection from "@/components/HowWeWorkSection";
-import BestProjectsSection from "@/components/BestProjectsSection";
-import { SparklesBackground } from "@/components/SparklesBackground";
-import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
-import FAQsSection from "@/components/FAQsSection";
-import BookAppointmentSection from "@/components/BookAppointmentSection";
-import Footer from "@/components/Footer";
+
+// Lazy load below-the-fold components
+const SparklesBackground = dynamic(
+  () => import("@/components/SparklesBackground").then((mod) => ({ default: mod.SparklesBackground })),
+  { ssr: false }
+);
+
+const HowWeWorkSection = dynamic(() => import("@/components/HowWeWorkSection"), {
+  loading: () => <div className="min-h-[60vh]" />,
+});
+
+const BestProjectsSection = dynamic(() => import("@/components/BestProjectsSection"), {
+  loading: () => <div className="min-h-[60vh]" />,
+});
+
+const StaggerTestimonials = dynamic(
+  () => import("@/components/ui/stagger-testimonials").then((mod) => ({ default: mod.StaggerTestimonials })),
+  {
+    loading: () => <div className="min-h-[60vh]" />,
+  }
+);
+
+const FAQsSection = dynamic(() => import("@/components/FAQsSection"), {
+  loading: () => <div className="min-h-[60vh]" />,
+});
+
+const BookAppointmentSection = dynamic(() => import("@/components/BookAppointmentSection"), {
+  loading: () => <div className="min-h-[60vh]" />,
+});
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => <div className="h-32" />,
+});
 
 export default function Home() {
   return (

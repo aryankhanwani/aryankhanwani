@@ -164,6 +164,9 @@ export default function BestProjectsSection() {
                           src={project.image}
                           alt={project.title}
                           className="w-full h-full object-cover"
+                          loading={index < 2 ? "eager" : "lazy"}
+                          decoding="async"
+                          fetchPriority={index < 2 ? "high" : "low"}
                           animate={{
                             scale: isHovered ? 1.05 : 1,
                           }}

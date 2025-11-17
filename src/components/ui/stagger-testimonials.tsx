@@ -307,6 +307,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index, i
                   src={testimonial.imgSrc}
                   alt={testimonial.by}
                   className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
               <motion.div 

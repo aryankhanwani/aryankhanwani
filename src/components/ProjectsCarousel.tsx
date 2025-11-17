@@ -52,6 +52,9 @@ export default function ProjectsCarousel() {
                   src={image.url}
                   alt={`Project ${image.id}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority={index < 4 ? "high" : "low"}
                 />
               </div>
             </div>
@@ -85,6 +88,9 @@ export default function ProjectsCarousel() {
                   src={image.url}
                   alt={`Project ${image.id}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority={index < 4 ? "high" : "low"}
                 />
               </div>
             </div>
