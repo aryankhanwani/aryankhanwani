@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -160,18 +161,22 @@ export default function BestProjectsSection() {
                       
                       {/* Project Image */}
                       <div className="relative aspect-[16/9] overflow-hidden">
-                        <motion.img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                          loading={index < 2 ? "eager" : "lazy"}
-                          decoding="async"
-                          fetchPriority={index < 2 ? "high" : "low"}
+                        <motion.div
                           animate={{
                             scale: isHovered ? 1.05 : 1,
                           }}
                           transition={{ duration: 0.4, ease: "easeOut" }}
-                        />
+                          className="w-full h-full"
+                        >
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </motion.div>
                       </div>
 
                       {/* Content */}

@@ -3,6 +3,7 @@ import { Outfit, Lora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import CustomCursor from "@/components/CustomCursor";
+import ResourceHints from "@/components/ResourceHints";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -18,7 +19,7 @@ const lora = Lora({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
-  preload: false,
+  preload: false, // Load on demand since it's used less frequently
 });
 
 const geistMono = Geist_Mono({
@@ -67,6 +68,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
+          <ResourceHints />
           <CustomCursor />
           <div className="min-h-screen w-full overflow-x-hidden relative">
         {children}

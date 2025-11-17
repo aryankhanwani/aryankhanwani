@@ -33,30 +33,18 @@ export default function BookAppointmentSection() {
   };
 
   useEffect(() => {
-    let mounted = true;
-    
     (async function () {
-      try {
-        const cal = await getCalApi({ namespace: "appointment" });
-        if (!mounted) return;
-        
-        cal("inline", {
-          calLink: CAL_COM_LINK,
-          elementOrSelector: "#cal-com-inline",
-        });
-        cal("ui", {
-          theme: theme === "dark" ? "dark" : "light",
-          hideEventTypeDetails: false,
-          layout: "month_view",
-        });
-      } catch (error) {
-        console.error("Failed to load Cal.com embed:", error);
-      }
+      const cal = await getCalApi({ namespace: "appointment" });
+      cal("inline", {
+        calLink: CAL_COM_LINK,
+        elementOrSelector: "#cal-com-inline",
+      });
+      cal("ui", {
+        theme: theme === "dark" ? "dark" : "light",
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
     })();
-
-    return () => {
-      mounted = false;
-    };
   }, [theme]);
 
   return (

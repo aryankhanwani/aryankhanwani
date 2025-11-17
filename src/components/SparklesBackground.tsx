@@ -17,8 +17,9 @@ export function SparklesBackground() {
         id="tsparticlesfullpage"
         background="transparent"
         minSize={1}
-        maxSize={4}
-        particleDensity={5}
+        maxSize={3}
+        particleDensity={3}
+        speed={2}
         className="w-full h-full"
         particleColor={particleColor}
       />
