@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Lora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import CustomCursor from "@/components/CustomCursor";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -55,7 +55,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
-          <CustomCursor />
+          <SmoothCursor />
           <div className="min-h-screen w-full overflow-x-hidden relative">
         {children}
           </div>

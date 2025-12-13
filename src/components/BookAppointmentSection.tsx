@@ -91,7 +91,7 @@ export default function BookAppointmentSection() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-2xl md:max-w-4xl mx-auto"
           >
             <motion.div
               variants={{
@@ -105,7 +105,7 @@ export default function BookAppointmentSection() {
                   },
                 },
               }}
-              className="relative rounded-2xl overflow-hidden min-h-[700px]"
+              className="relative rounded-xl md:rounded-2xl overflow-hidden"
             >
               {/* Cal.com Inline Embed */}
               <div
@@ -113,11 +113,7 @@ export default function BookAppointmentSection() {
                 data-cal-namespace="appointment"
                 data-cal-link={CAL_COM_LINK}
                 data-cal-config='{"layout":"month_view"}'
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  overflow: "auto",
-                }}
+                className="w-full max-h-[500px] md:max-h-none md:min-h-[700px] overflow-auto"
               />
             </motion.div>
           </motion.div>

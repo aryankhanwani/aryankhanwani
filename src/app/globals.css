@@ -39,5 +39,11 @@ body {
   * {
     cursor: none !important;
   }
+
+  input,
+  textarea,
+  select {
+    cursor: text !important;
+  }
 }
 
