@@ -9,7 +9,6 @@ const workImages = [
   { id: 3, url: '/work-3.png' },
   { id: 4, url: '/work-4.png' },
   { id: 5, url: '/work-5.png' },
-  { id: 6, url: '/work-6.png' },
 ];
 
 export default function ProjectsCarousel() {
